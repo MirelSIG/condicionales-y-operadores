@@ -52,3 +52,10 @@ button:hover { background: #004c99; }
     text-align: center;
     line-height: 30px;
 }
+
+.container input,
+.container button,
+.container label {
+  display: block;
+  margin: 8px 0;
+}

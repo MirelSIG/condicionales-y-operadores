@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Demos Visuales de Operadores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Operadores en JavaScript</h1>
+
+    <!-- Valor inicial para x -->
+    <p>Introduce un valor inicial para <code>x</code>:</p>
+    <input type="number" id="valorInicial" value="5">
+    <button onclick="demoPostIncremento()">x++</button>
+    <button onclick="demoPreIncremento()">++x</button>
+    <button onclick="demoPostDecremento()">x--</button>
+    <button onclick="demoPreDecremento()">--x</button>
+
+    <!-- Cantidad para operar -->
+    <p>Introduce la cantidad para operar:</p>
+    <input type="number" id="cantidad" value="1">
+    <button onclick="demoAcumulativoSuma()">x += n</button>
+    <button onclick="demoAcumulativoResta()">x -= n</button>
+    <button onclick="demoAcumulativoProducto()">x *= n</button>
+    <button onclick="demoAcumulativoDivision()">x /= n</button>
+
+    <!-- Comparación -->
+    <p>Introduce un valor para comparar con 18:</p>
+    <input type="text" id="valorComparacion" placeholder="Ej. 18 o '18'">
+    <button onclick="demoComparacion()">Comparación == vs ===</button>
+
+    <!-- Concatenación -->
+    <p>Introduce tu nombre:</p>
+    <input type="text" id="nombre" placeholder="Nombre">
+    <p>Introduce tu apellido:</p>
+    <input type="text" id="apellido" placeholder="Apellido">
+    <button onclick="demoConcatenacion()">Concatenar saludo</button>
+
+    <!-- Evaluación lógica -->
+    <label>
+      <input type="checkbox" id="tieneClave" checked>
+      Tiene clave
+    </label>
+    <label>
+      <input type="checkbox" id="esAdmin">
+      Es administrador
+    </label>
+    <button onclick="demoLogicos()">Evaluar lógica</button>
+    <button onclick="demoLogicos()">Tabla de verdad (&&, ||, !)</button>
+
+    <!-- Resultados y barra -->
+    <div id="resultados"></div>
+    <div id="barra" style="height: 30px; background: #4caf50; color: white; text-align: center;"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/demo_comparacion.js"></script>
+  <script src="js/demo_logicos.js"></script>
+  <script src="js/demo_concatenacion.js"></script>
+  <script src="js/demo_postIncremento.js"></script>
+  <script src="js/demo_preIncremento.js"></script>
+  <script src="js/demo_acumulativoSuma.js"></script>
+  <script src="js/demo_acumulativoResta.js"></script>
+  <script src="js/demo_acumulativoProducto.js"></script>
+  <script src="js/demo_acumulativoDivision.js"></script>
+  <script src="js/demo_preDecremento.js"></script>
+  <script src="js/demo_postDecremento.js"></script>
+</body>
+</html>
