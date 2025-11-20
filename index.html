@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales en JavaScript - Interactivo</title>
+    <link rel="stylesheet" href="assets/css/condicionales.css">
+</head>
+<header>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <nav id="nav-menu" class="nav-horizontal"> 
+      <a href="index.html" class="menu-button op-condicionales">Condicionales</a>
+      <a href="operadores.html" class="menu-button op-operadores">Operadores</a>
+      <a href="G_errores.html" class="menu-button op-errores">Gestión de Errores</a>
+      <a href="predefinidos.html" class="menu-button op-predefinidas">Operaciones Predefinidas</a>
+      </nav>
+</header>
+<body>
+    <div class="container">
+        <nav class="site-nav" role="navigation" aria-label="Principal">
+            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+                <span class="burger"></span>
+            </button>
+           
+        </nav>
+    
+
+        <div class="condicionales-grid">
+            <!-- IF/ELSE BÁSICO -->
+            <div class="card">
+                <h2>If/Else Básico</h2>
+                <p>Verifica si una edad es mayor o menor de 18 años</p>
+                
+                <div class="input-group">
+                    <label for="edad">Ingresa una edad:</label>
+                    <input type="number" id="edad" placeholder="Ej: 25" value="25">
+                </div>
+
+                <button onclick="ejecutarIfElseBasico()">Ejecutar</button>
+
+                <div class="result-box" id="resultIfElseBasico">
+                    <span class="result-label">Resultado:</span>
+                    <span id="resultIfElseBasicoText">Presiona el botón para ver el resultado</span>
+                </div>
+
+                <div class="code-section">
+<span class="keyword">let</span> edad = <span class="number">25</span>;
+<span class="keyword">if</span> (edad >= <span class="number">18</span>) {
+  console.<span class="keyword">log</span>(<span class="string">"Eres mayor de edad"</span>);
+} <span class="keyword">else</span> {
+  console.<span class="keyword">log</span>(<span class="string">"Eres menor de edad"</span>);
+}
+                </div>
+            </div>
+
+            <!-- IF/ELSE ANIDADO -->
+            <div class="card">
+                <h2>If/Else Anidado</h2>
+                <p>Clasifica una calificación en diferentes categorías</p>
+                
+                <div class="input-group">
+                    <label for="calificacion">Ingresa una calificación (0-100):</label>
+                    <input type="number" id="calificacion" placeholder="Ej: 85" value="85" min="0" max="100">
+                </div>
+
+                <button onclick="ejecutarIfElseAnidado()">Ejecutar</button>
+
+                <div class="result-box" id="resultIfElseAnidado">
+                    <span class="result-label">Resultado:</span>
+                    <span id="resultIfElseAnidadoText">Presiona el botón para ver el resultado</span>
+                </div>
+
+                <div class="code-section">
+<span class="keyword">if</span> (calificacion >= <span class="number">90</span>) {
+  resultado = <span class="string">"Excelente"</span>;
+} <span class="keyword">else if</span> (calificacion >= <span class="number">80</span>) {
+  resultado = <span class="string">"Muy Bien"</span>;
+} <span class="keyword">else if</span> (calificacion >= <span class="number">70</span>) {
+  resultado = <span class="string">"Bien"</span>;
+} <span class="keyword">else</span> {
+  resultado = <span class="string">"Insuficiente"</span>;
+}
+                </div>
+            </div>
+
+            <!-- SWITCH/CASE -->
+            <div class="card">
+                <h2>Switch/Case</h2>
+                <p>Obtén el nombre del día según su número</p>
+                
+                <div class="input-group">
+                    <label for="numeroDia">Selecciona un día (1-7):</label>
+                    <select id="numeroDia">
+                        <option value="1">1 - Lunes</option>
+                        <option value="2">2 - Martes</option>
+                        <option value="3">3 - Miércoles</option>
+                        <option value="4">4 - Jueves</option>
+                        <option value="5">5 - Viernes</option>
+                        <option value="6">6 - Sábado</option>
+                        <option value="7">7 - Domingo</option>
+                    </select>
+                </div>
+
+                <button onclick="ejecutarSwitch()">Ejecutar</button>
+
+                <div class="result-box" id="resultSwitch">
+                    <span class="result-label">Resultado:</span>
+                    <span id="resultSwitchText">Presiona el botón para ver el resultado</span>
+                </div>
+
+                <div class="code-section">
+<span class="keyword">switch</span> (dia) {
+  <span class="keyword">case</span> <span class="number">1</span>: resultado = <span class="string">"Lunes"</span>; <span class="keyword">break</span>;
+  <span class="keyword">case</span> <span class="number">2</span>: resultado = <span class="string">"Martes"</span>; <span class="keyword">break</span>;
+  <span class="keyword">case</span> <span class="number">3</span>: resultado = <span class="string">"Miércoles"</span>; <span class="keyword">break</span>;
+  <span class="keyword">default</span>: resultado = <span class="string">"Día inválido"</span>;
+}
+                </div>
+            </div>
+
+            <!-- TERNARIO BÁSICO -->
+            <div class="card">
+                <h2>Ternario Básico</h2>
+                <p>Verifica si un número es par o impar</p>
+                
+                <div class="input-group">
+                    <label for="numero">Ingresa un número:</label>
+                    <input type="number" id="numero" placeholder="Ej: 10" value="10">
+                </div>
+
+                <button onclick="ejecutarTernarioBasico()">Ejecutar</button>
+
+                <div class="result-box" id="resultTernarioBasico">
+                    <span class="result-label">Resultado:</span>
+                    <span id="resultTernarioBasicoText">Presiona el botón para ver el resultado</span>
+                </div>
+
+                <div class="code-section">
+<span class="keyword">let</span> numero = <span class="number">10</span>;
+<span class="keyword">let</span> resultado = numero % <span class="number">2</span> === <span class="number">0</span> ? 
+  <span class="string">"Es par"</span> : <span class="string">"Es impar"</span>;
+                </div>
+            </div>
+
+            <!-- TERNARIO ANIDADO -->
+            <div class="card">
+                <h2>Ternario Anidado</h2>
+                <p>Clasifica puntos en premios (Oro, Plata, Bronce)</p>
+                
+                <div class="input-group">
+                    <label for="puntos">Ingresa puntos (0-100):</label>
+                    <input type="number" id="puntos" placeholder="Ej: 75" value="75" min="0" max="100">
+                </div>
+
+                <button onclick="ejecutarTernarioAnidado()">Ejecutar</button>
+
+                <div class="result-box" id="resultTernarioAnidado">
+                    <span class="result-label">Resultado:</span>
+                    <span id="resultTernarioAnidadoText">Presiona el botón para ver el resultado</span>
+                </div>
+
+                <div class="code-section">
+<span class="keyword">let</span> premio = puntos >= <span class="number">90</span> ? <span class="string">"Oro"</span> :
+              puntos >= <span class="number">75</span> ? <span class="string">"Plata"</span> :
+              puntos >= <span class="number">50</span> ? <span class="string">"Bronce"</span> :
+              <span class="string">"Sin premio"</span>;
+                </div>
+            </div>
+
+            <!-- COMBINADO: TODOS LOS CONDICIONALES -->
+            <div class="card">
+                <h2>Ejemplo Combinado</h2>
+                <p>Usa todos los tipos de condicionales juntos</p>
+                
+                <div class="input-group">
+                    <label for="edadCombinada">Ingresa tu edad:</label>
+                    <input type="number" id="edadCombinada" placeholder="Ej: 25" value="25">
+                </div>
+
+                <button onclick="ejecutarCombinado()">Ejecutar</button>
+
+                <div class="result-box" id="resultCombinado">
+                    <span class="result-label">Resultado:</span>
+                    <span id="resultCombinnadoText">Presiona el botón para ver el resultado</span>
+                </div>
+
+                <div class="code-section">
+<span class="comment">// Combinando if/else, switch y ternario</span>
+<span class="keyword">let</span> categoria = edad >= <span class="number">18</span> ? <span class="string">"Adulto"</span> : <span class="string">"Menor"</span>;
+<span class="keyword">if</span> (edad >= <span class="number">65</span>) {
+  etapa = <span class="string">"Jubilado"</span>;
+} <span class="keyword">else if</span> (edad >= <span class="number">18</span>) {
+  etapa = <span class="string">"Trabajador"</span>;
+} <span class="keyword">else</span> {
+  etapa = <span class="string">"Estudiante"</span>;
+}
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>illo esto es unas pruebitas para ver como va esto del JavaScript :D</strong></p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
