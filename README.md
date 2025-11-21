@@ -10,8 +10,8 @@ Repositorio de ejemplos didácticos sobre estructuras de control en JavaScript. 
 ---
 ## Estructura del proyecto
 
-- `operadores.html`: Página principal que carga los demos y muestra resultados.
-- `operadores.css`: Estilos para la página de ejemplo.
+- `index.html`: Página principal que carga los demos y muestra resultados.
+- `css`: Carpeta con archivos de estilos para la página de ejemplo.
 - `js/` : Carpeta con ejemplos y scripts.
 
 ```text
