@@ -9,6 +9,5 @@ function demoPostIncremento() {
     document.getElementById("valorInicial").value = x;
     document.getElementById("resultados").innerHTML = salida;
 
-    actualizarBarra(x);
 }
 

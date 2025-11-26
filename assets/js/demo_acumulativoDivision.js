@@ -14,6 +14,5 @@ function demoAcumulativoDivision() {
     }
 
     document.getElementById("resultados").innerHTML = salida;
-    actualizarBarra(x);
 }
 
